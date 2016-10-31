@@ -1,0 +1,153 @@
+Protocol for MS2 live imaging
+
+Before mounting sample  1. Select user account 
+
+2. Open microscope software (Zen) – Then, select Zen system option. If necessary, do calibration.
+
+3. Select 40X oil objective – Lower objective to Z lower limit
+
+4. Hit Locate (default setting may be Locate)
+
+5. Add a drop of immersion oil to the sample and put the sample on the microscope 
+
+6. Rise objective until it touches the oil drop.
+
+Locate embryos
+
+7. Enable transmitted light under Locate. Make sure that optical path is connected from illumination to eyepiece.
+
+8. Find out embryos using 40X oil objective – embryos are found around 1.8 mm in Z course. 
+
+9. Go Stage and select Marks (right side of the software window).
+
+10. Find the anterior tip of each embryo under the transmitted light and hit ‘+’ to mark them, Naming each embryos will be useful. For example, ‘t’ for embryo whose anterior tip is top side, and ‘b’ for embryo whose anterior tip is bottom side.
+
+Find the right embryo and set imaging parameters
+
+11. Hit Acquisition. You shouldn’t hit locate again after laser setup.
+
+12. Hit Smart setup under Acquisition to select the appropriate emission wave length
+
+1st Channel – EGFP (509nm)
+2nd Channel – tagRFP (583nm)
+
+
+13. Find one embryo of the right age (go to Stage – Select positions. Hit paper plane button) with Live under Acquisition. Make sure you are using the red channel. 
+
+14. Lower 40X oil objective to bottom Z position and switch to 63X oil objective. Move stage and add a drop of immersion oil on 63X and rise objective. Never touch the slide.
+
+15. Focus 63X into the area you want to image on your embryo. Go back to your selected embryo. 
+
+
+
+
+
+
+
+Set parameters of acquisition 
+
+You should not touch image acquisition button, since it sometimes delay scan time. (I am not sure why)
+
+16. Go to Acquisition Mode (show all)
+
+Set Scan mode to Frame (Default)
+
+17. Bits per pixel 16
+
+18. Frame Size X:512 Y:256
+
+21. Rotate sampling field to the right position.
+
+22. Scan Area (acquisition mode) – 1 (default. 1.7 is too zoomed in and 0.8 is impossible to rotate)
+
+23. Set bidirectional scanning 
+
+24. Set Scan speed at maximum 
+
+25. Set averaging at 2 
+
+26. Go to Channels and set laser power (WE MIGHT HAVE TO PLAY WITH THIS, Try to bleach the embryo on the red channel?? )
+
+a) Power 0.20% EGFP  - 488nm Laser (Set this laser pinhole to 1AU)
+
+b) Power 0.20% tagRFP  - 561nm Laser 
+
+c) Keep Gain between 600 and 800 (Maybe 1?)  d) Keep Digital Gain below 1.0 (Maybe 1?)
+
+TAKE A LOOK ON FOCUS STRATEGY, MAYBE WE DON’T NEED TO SIN HERE FOR 3H STRAIGHT!
+
+Define Z stacking parameters (Z stack)
+
+Check Z stack to activate z stacking option.
+
+1. Go to Live
+
+2. Focus until bottom of the nuclei – Hit Set First
+
+3. Set 0.5µm interval – 21 slices – Range 10µm
+
+Start experiment
+
+1. Right click on the display to set: Grid – Rulers – Floating scale bar 
+
+Set the exact position on the embryo that you want to image
+
+2. Enable time series 
+
+a) As long as possible
+
+b) Interval 0.0 (Default)
+
+3. Unselect Tiles (default)
+
+4. Select Auto saved
+
+5. Define the name of your experiment – save in D:/
+
+6. Hit Start Experiment
+
+Make sure to stop your experiment and redefine your Z stacks if the nuclei go out of focus. Hit Start Experiment again 
+
+7. Finish experiment – Take positions of the imaging (Imaging field, anterior, and posterior).
+
+Take pictures of full embryo (Tiling)
+
+You need to take 2 full embryo pictures, surf and mid. surf will be used to correlate zoomed picture to full embryo picture. mid will be used to determine AP position. The size of mid and surf picture should be exactly same to use Hernan’s code. So you should take mid picture first because mid picture is larger than surf picture.
+
+8. Switch from 63X oil to 43X oil objective
+
+9. Acquisition mode 
+
+10. Scan Area to 1. Rotation to 0.
+
+11. Frame Size 512 x 512 (256 x 256 is ok. Note that longer edge of the frame determine pixel size)
+
+12. Tiles – Select Advanced Setup
+
+13. Live – Go to the surface or mid
+
+14. Set 4 slices under Z stack parameters. 1um interval.
+
+15. Deselect time series
+
+16. Snap around embryo to select the contour. (Also there is rectangle contour option.)
+
+17. Draw a tile region
+
+18. Right click to set region to tile
+
+19. Change name of the file to surf or mid, depending on what kinds of pictures you want to take.
+
+20. Start experiment
+
+Note that tile region contains information of Z position. Setting at Z stack is not enough. You should go to tile region option in the Tiling and set z axis of tile region to the current z axis position (by right click or option button).
+
+21. Lower objectives, take your sample off, and clean all lenses you used. 
+
+
+
+
+
+
+
+
